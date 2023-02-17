@@ -4,6 +4,6 @@ admin:
   email: admin@admin.com
   password: admin
 bot:
-  token: 4edf113a068eaa9863a4a285652b3d892ba4d233eff045166df4308ab6745480785bc9e1467bb705d3de6
-  group_id: 210964975
+  token: 1
+  group_id: 1
 
