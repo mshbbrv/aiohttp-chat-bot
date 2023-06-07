@@ -1,4 +1,6 @@
 import typing
+
+from app.store.bot.manager import BotManager
 from app.store.database.database import Database
 
 if typing.TYPE_CHECKING:
@@ -11,13 +13,12 @@ class Store:
 
         from app.store.quiz.accessor import QuizAccessor
         from app.store.admin.accessor import AdminAccessor
-        from app.store.bot.manager import BotManager
-        from app.store.vk_api.accessor import VkApiAccessor
+        from app.store.telegram_api.accessor import TelegramBotApiAccessor
 
-        self.vk_api = VkApiAccessor(app)
         self.quizzes = QuizAccessor(app)
         self.admins = AdminAccessor(app)
         self.bots_manager = BotManager(app)
+        self.tg_bot_api = TelegramBotApiAccessor(app)
 
 
 def setup_store(app: "Application"):

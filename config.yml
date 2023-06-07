@@ -1,9 +1,8 @@
 session:
-  key: LI_O8kSECBx2ALK4A6wO_VJr-TaR8-zb_U0DSe-LPNs=
+  key:
 admin:
-  email: admin@admin.com
-  password: admin
+  email:
+  password:
 bot:
-  token: 1
-  group_id: 1
+  token:
 

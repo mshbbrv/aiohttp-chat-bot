@@ -1,6 +1,6 @@
 import typing
 
-from app.store.vk_api.dataclasses import Update, Message
+from app.store.telegram_api.dataclasses import Update
 
 if typing.TYPE_CHECKING:
     from app.web.app import Application
@@ -12,7 +12,4 @@ class BotManager:
 
     async def handle_updates(self, updates: list[Update]):
         for update in updates:
-            await self.app.store.vk_api.send_message(Message(
-                user_id=update.object.message.from_id,
-                text='Oh hey there')
-            )
+            await self.app.store.tg_bot_api.send_message(update.message)
